@@ -213,7 +213,7 @@ Styles.css;
 
        sudo nano /etc/nginx/sites-available/homelab-dashboard
 
-    The format should be similar to;
+  The format should be similar to;
  
 
            server {
@@ -236,7 +236,8 @@ The following command is to enable the Nginx site;
 The following command should reload nginx;
 
        sudo systemctl reload nginx
-The dashboard should now be live at your IP address or domain name
+The dashboard should now be live at your IP address or domain name.
+
 To enable HTTPS(SSL/TLS) to your domain the following command can be used;
 
     sudo apt install certbot python3-certbot-nginx -y
