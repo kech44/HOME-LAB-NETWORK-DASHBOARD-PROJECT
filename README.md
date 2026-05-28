@@ -32,7 +32,8 @@ create your HTML and paste it into index.html after using terminal to remotely c
      Index.html is edited using the command:
    
                   nano /var/www/html/index.html
-   Create the style.css file and the dashboard.js file and move them to a directory homelab- dashboard. The commands to create the files if they are not created yet;
+   
+   Create the style.css file and the dashboard.js file and move them to a directory homelab-dashboard. The commands to create the files if they are not created yet;
 
 
          sudo nano /var/www/homelab-dashboard/index.html
@@ -239,13 +240,17 @@ The following command is to enable the Nginx site;
 The following command should reload nginx;
 
        sudo systemctl reload nginx
+
+       
 The dashboard should now be live at your IP address or domain name.
 
 To enable HTTPS(SSL/TLS) to your domain the following command can be used;
 
     sudo apt install certbot python3-certbot-nginx -y
     sudo certbot --nginx -d your.domain.name
-  Your doamin should now be accessible through;
+
+    
+  Your domain should now be accessible through;
   
          https://your.domain.name
 
@@ -256,20 +261,26 @@ To enable HTTPS(SSL/TLS) to your domain the following command can be used;
 -It saves it to a JSON file
 -It serves it the the dashboard
 In this project Pyhton Flask was used as it was the easiest to use.
+
+
 Fisrt Flask is installed on the EC2 server;
      
      sudo apt update
      sudo apt install python3 python3-pip -y
      pip3 install flask
+
+     
 The API directory is created;
 
     sudo mkdir -p /opt/homelab-api
     cd /opt/homelab-api
+
+    
 Create app.py which is a tiny Flask server to read the data.json file to make it available to the dashboard at /api/devices
 
       sudo nano /opt/homelab-api/app.py
 
-The following is a sample pyhton code of app.py;
+The following is a sample python code of app.py;
 
 
     from flask import Flask, request, jsonify
@@ -337,16 +348,19 @@ paste the starter template;
 
 
 3.Python Home monitoring script
+
 This script will run on the windows machine collecting network information
 Install the required tools which are;
 -Python
 -Nmap for scanning the network
-- Pyhton script for sending the data to the server
+- Python script for sending the data to the server
 
 i) Install python on windows
+
  Download Python from:
 
     https://www.python.org/downloads/windows/
+    
 ii) Download and install Nmap to use on Windows to collect the data
 
      https://nmap.org/download.html
