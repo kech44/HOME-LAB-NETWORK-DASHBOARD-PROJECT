@@ -5,6 +5,7 @@
 NAME: ALLAN KOECH
 
 STUDENT NUMBER: 35043207**
+Domain: https://www.birirallan.com/
 
 This project is a lightweight, self‑hosted network monitoring system that scans your LAN and WIFI, measures latency, checks device status, records network speed, and displays everything in a clean web dashboard.
 The project consists of:
