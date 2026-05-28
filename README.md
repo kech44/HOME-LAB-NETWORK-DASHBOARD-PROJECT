@@ -255,12 +255,12 @@ To enable HTTPS(SSL/TLS) to your domain the following command can be used;
          https://your.domain.name
 
 
-2. Bulid the Backend API to give the dashboard real data
+2. Build the Backend API to give the dashboard real data
 
 -It accepts POST data from the home monitoring script
 -It saves it to a JSON file
 -It serves it the the dashboard
-In this project Pyhton Flask was used as it was the easiest to use.
+In this project Python Flask was used as it was the easiest to use.
 
 
 Fisrt Flask is installed on the EC2 server;
